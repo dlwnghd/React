@@ -66,3 +66,38 @@
 .detail>span:nth-child(3){
     font-size: 12px;
 }
+
+/* Expandable Card(확장된 카드) */
+
+.ExpandedCard{
+    position:absolute;
+    width: 60%;
+    height: 70vh;
+    z-index: 9;
+    left: 13rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/* 확장된 카드 내의 타이틀 */
+.ExpandedCard >span:nth-of-type(1){
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px white;
+}
+
+/* 확장된 카드의 아래 정보(Last 24 hours) */
+.ExpandedCard >span:nth-of-type(2){
+    color: rgb(223, 222, 222);
+    font-size: 16px;
+}
+
+/* 차트의 넓이 */
+.chartContainer{
+    width: 70%;
+}
