@@ -1,76 +1,66 @@
-.CompactCard{
+.CompactCard {
     display: flex;
     flex: 1;
-    height: 7rem!important;
+    height: 7rem !important;
     border-radius: 0.7rem;
     color: white;
+    padding: 1rem;
     position: relative;
     cursor: pointer;
-    padding: 1rem;
 }
-
-/* 대시보드 카드에 마우스가 올라갔을때 */
-.CompactCard:hover{
+.CompactCard:hover {
     box-shadow: none !important;
 }
 
-/* radiabar */
-.radialBar{
-    flex: 1;
+/* radial bar */
+.radialBar {
+    flex: 1 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 1rem;
 }
-
-.CircularProgressbar{
+.CircularProgressbar {
     width: 4rem !important;
     overflow: visible;
 }
-
-/* 원형 그래프 색상 */
-.CircularProgressbar-path{
-    stroke: white!important;
+.CircularProgressbar-path {
+    stroke: white !important;
     stroke-width: 12px !important;
     filter: drop-shadow(2px 4px 6px white);
 }
-
-/* 원형 그래프 부족한 부분 표시❌ */
-.CircularProgressbar-trail{
+.CircularProgressbar-trail {
     display: none;
 }
-
-.CircularProgressbar-text{
+.CircularProgressbar-text {
     fill: white !important;
 }
 
-.radialBar>span{
+.radialBar > span {
     font-size: 17px;
     font-weight: bold;
 }
 
-/* detail */
-.detail{
+/* sideDetail*/
+.detail {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;
 }
 
-.detail>span:nth-child(2){
+.detail > span:nth-child(2) {
     font-size: 22px;
     font-weight: bold;
 }
-
-.detail>span:nth-child(3){
+.detail > span:nth-child(3) {
     font-size: 12px;
 }
 
-/* Expandable Card(확장된 카드) */
-
-.ExpandedCard{
-    position:absolute;
+/* ExpandedCard */
+.ExpandedCard {
+    position: absolute;
     width: 60%;
     height: 70vh;
     z-index: 9;
@@ -79,25 +69,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem;
 }
-
-/* 확장된 카드 내의 타이틀 */
-.ExpandedCard >span:nth-of-type(1){
+.ExpandedCard > span:nth-of-type(1) {
     color: white;
     font-size: 26px;
     font-weight: bold;
-    text-shadow: 0px 0px 15px white;
+    text-shadow: 0 0 15px white;
+}
+.ExpandedCard > span:nth-of-type(2) {
+    color: rgb(236, 236, 236);
+    font-size: 15px;
 }
 
-/* 확장된 카드의 아래 정보(Last 24 hours) */
-.ExpandedCard >span:nth-of-type(2){
-    color: rgb(223, 222, 222);
-    font-size: 16px;
-}
-
-/* 차트의 넓이 */
-.chartContainer{
+.chartContainer {
     width: 70%;
+}
+
+@media screen and (max-width: 1200px) {
+    .ExpandedCard {
+        top: 2rem;
+        height: 45vh;
+        left: 6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ExpandedCard {
+        top: 8rem;
+        height: 50%;
+        left: 25px;
+        width: 80%;
+    }
 }
