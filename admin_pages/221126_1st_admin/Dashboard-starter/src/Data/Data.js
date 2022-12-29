@@ -33,11 +33,11 @@ export const SidebarData = [
   },
   {
     icon: UilPackage,
-    heading: "Products",
+    heading: 'Products'
   },
   {
     icon: UilChart,
-    heading: "Analytics",
+    heading: 'Analytics'
   },
 ];
 
